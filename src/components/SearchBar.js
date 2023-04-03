@@ -15,7 +15,7 @@ class SearchBar extends React.Component {
         // console.log(this.state.term);
     }
 
-    onFormSubmit = (event) => {
+    onFormSubmit(event) {
         event.preventDefault();
         this.setState({ lastSubmit: this.state.term })
         console.log(this.state.term)
@@ -24,7 +24,7 @@ class SearchBar extends React.Component {
     render() {
         return (
             <div className='ui segment' >
-                <form className='ui form' onSubmit={this.onFormSubmit} >
+                <form className='ui form' onSubmit={(e) => this.onFormSubmit(e)} >
                     <div className="ui icon input field" id="search-input">
                         <input type="text" name="seachQuery" placeholder="Search Image..." onChange={(e) => this.setState({ term: e.target.value })} value={this.state.term} />
                         <i className="circular search link icon" />
