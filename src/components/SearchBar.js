@@ -15,7 +15,7 @@ class SearchBar extends React.Component {
             <div className='ui segment' >
                 <form className='ui form'>
                     <div className="ui icon input field" id="search-input">
-                        <input type="text" name="seachQuery" placeholder="Search Image..." onChange={(e) => this.setState({ term: e.target.value })} />
+                        <input type="text" name="seachQuery" placeholder="Search Image..." onChange={(e) => this.setState({ term: e.target.value })} value={this.state.term} />
                         <i className="circular search link icon" />
                     </div>
                 </form>
