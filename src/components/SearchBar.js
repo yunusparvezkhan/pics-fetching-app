@@ -6,15 +6,6 @@ import "semantic-ui-css/semantic.min.css";
 class SearchBar extends React.Component {
     state = { term: "", lastSubmit: "" };
 
-    // constructor() {
-    //     super();
-    //     this.onFormSubmit = this.onFormSubmit.bind(this);
-    // }
-
-    componentDidUpdate() {
-        // console.log(this.state.term);
-    }
-
     onFormSubmit(event) {
         event.preventDefault();
         this.setState({ lastSubmit: this.state.term })
