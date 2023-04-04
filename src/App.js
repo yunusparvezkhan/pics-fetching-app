@@ -8,12 +8,14 @@ class App extends React.Component {
 
 
   seachFunc(input) {
-    // console.log(input);
+    console.log(input);
     axios.get("https://api.unsplash.com/search/photos", {
       params: { query: input },
-      header: {
-        Authorization: 'Clint-ID PLiLgVUo7Z-p2Rkguvg0HYTXUEfu7ORa-5w4lFl1OOo',
+      headers: {
+        Authorization: "Client-ID PLiLgVUo7Z-p2Rkguvg0HYTXUEfu7ORa-5w4lFl1OOo"
       }
+    }).then((res) => {
+      console.log(res.data.results);
     });
   };
 
