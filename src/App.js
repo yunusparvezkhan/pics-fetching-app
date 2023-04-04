@@ -7,16 +7,15 @@ import "semantic-ui-css/semantic.min.css";
 class App extends React.Component {
 
 
-  seachFunc(input) {
+  async seachFunc(input) {
     console.log(input);
-    axios.get("https://api.unsplash.com/search/photos", {
+    const res = await axios.get("https://api.unsplash.com/search/photos", {
       params: { query: input },
       headers: {
         Authorization: "Client-ID PLiLgVUo7Z-p2Rkguvg0HYTXUEfu7ORa-5w4lFl1OOo"
       }
-    }).then((res) => {
-      console.log(res.data.results);
     });
+    console.log(res.data.results);
   };
 
 
