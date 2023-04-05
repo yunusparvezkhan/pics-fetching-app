@@ -9,19 +9,14 @@ class App extends React.Component {
 
   constructor() {
     super();
-    this.state = { images: [], msg: "" };
+    this.state = { images: [] };
     this.searchFunc = this.searchFunc.bind(this);
-    console.log(this.state.images);
   }
 
   async searchFunc(input) {
     const res = await unsplash.get("/search/photos", {
       params: { query: input },
     });
-
-    this.setState({ images: res.data.results }, () => {
-      this.setState({ msg: "Found " + this.state.images.length + " images that matches your query" })
-    })
   };
 
   render() {
@@ -29,7 +24,6 @@ class App extends React.Component {
       <div className='ui container'>
         <SearchBar onSubmission={this.searchFunc} />
         <ImageList images={this.state.images} />
-
       </div>
     )
   }

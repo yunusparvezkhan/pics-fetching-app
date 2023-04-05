@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const ImageList = (props) => {
     const results = props.images.map((image) => {

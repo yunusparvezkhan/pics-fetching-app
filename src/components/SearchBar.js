@@ -4,7 +4,7 @@ import "semantic-ui-css/semantic.min.css";
 
 
 class SearchBar extends React.Component {
-    state = { term: "", lastSubmit: "" };
+    state = { term: "" };
 
     onFormSubmit(event) {
         event.preventDefault();
@@ -25,4 +25,4 @@ class SearchBar extends React.Component {
     }
 }
 
-export default SearchBar
+export default SearchBar;
