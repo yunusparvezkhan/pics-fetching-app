@@ -8,8 +8,9 @@ class App extends React.Component {
 
   constructor() {
     super();
-    this.state = { images: [] };
+    this.state = { images: [], msg: "" };
     this.searchFunc = this.searchFunc.bind(this);
+    console.log(this.state.images);
   }
 
   async searchFunc(input) {
@@ -20,15 +21,18 @@ class App extends React.Component {
       }
     });
 
-    this.setState({ images: res.data.results });
-    console.log(this.state.images);
+    this.setState({ images: res.data.results }, () => {
+      this.setState({ msg: "Found " + this.state.images.length + " images that matches your query" })
+    })
   };
-
 
   render() {
     return (
       <div className='ui container'>
         <SearchBar onSubmission={this.searchFunc} />
+        <div>
+          {this.state.msg}
+        </div>
       </div>
     )
   }
