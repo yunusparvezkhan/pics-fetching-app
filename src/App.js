@@ -8,7 +8,8 @@ class App extends React.Component {
 
   constructor() {
     super();
-    this.state = { images: [] }
+    this.state = { images: [] };
+    this.searchFunc = this.searchFunc.bind(this);
   }
 
   async searchFunc(input) {
