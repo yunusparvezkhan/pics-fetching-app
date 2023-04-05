@@ -1,11 +1,9 @@
 import React from 'react';
 
 const ImageList = (props) => {
-    const results = props.images.map((image) => {
-        console.log(image.links.download)
-        return <img src={image.urls.regular} />
+    const results = props.images.map((image, i) => {
+        return <img key={i} src={image.urls.regular} />
     })
-
     return <div>{results}</div>
 }
 
