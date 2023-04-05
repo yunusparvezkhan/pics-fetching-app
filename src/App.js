@@ -6,23 +6,28 @@ import "semantic-ui-css/semantic.min.css";
 
 class App extends React.Component {
 
+  constructor() {
+    super();
+    this.state = { images: [] }
+  }
 
-  async seachFunc(input) {
-    console.log(input);
+  async searchFunc(input) {
     const res = await axios.get("https://api.unsplash.com/search/photos", {
       params: { query: input },
       headers: {
         Authorization: "Client-ID PLiLgVUo7Z-p2Rkguvg0HYTXUEfu7ORa-5w4lFl1OOo"
       }
     });
-    console.log(res.data.results);
+
+    this.setState({ images: res.data.results });
+    console.log(this.state.images);
   };
 
 
   render() {
     return (
       <div className='ui container'>
-        <SearchBar onSubmission={this.seachFunc} />
+        <SearchBar onSubmission={this.searchFunc} />
       </div>
     )
   }
