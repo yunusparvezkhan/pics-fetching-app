@@ -1,7 +1,7 @@
 import React from 'react';
 import unsplash from "./api/unsplash-api";
 import SearchBar from "./components/SearchBar";
-import ImageList from "./components/imageList";
+import ImageList from "./components/ImageList";
 import "semantic-ui-css/semantic.min.css";
 
 
@@ -28,7 +28,6 @@ class App extends React.Component {
     return (
       <div className='ui container'>
         <SearchBar onSubmission={this.searchFunc} />
-        {/* {this.state.msg} */}
         <ImageList images={this.state.images} />
 
       </div>
