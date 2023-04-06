@@ -11,13 +11,17 @@ class SearchBar extends React.Component {
         this.props.onSubmission(this.state.term);
     }
 
+
+
     render() {
         return (
             <div className='ui segment' >
                 <form className='ui form' onSubmit={(e) => this.onFormSubmit(e)} >
                     <div className="ui icon input field" id="search-input">
                         <input type="text" name="seachQuery" placeholder="Search Image..." onChange={(e) => this.setState({ term: e.target.value })} value={this.state.term} />
-                        <i className="circular search link icon" />
+                        {/* <button type='submit' id='search-btn'> */}
+                        <i className="circular search link icon" id='search-icon' onClick={(e) => this.onFormSubmit(e)} />
+                        {/* </button> */}
                     </div>
                 </form>
             </div>
