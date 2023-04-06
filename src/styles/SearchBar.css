@@ -4,11 +4,3 @@
     transform: translate(-50%);
 
 }
-
-#search-btn {
-    background-color: transparent;
-    border: 0;
-    padding: 0;
-    margin: 0;
-    position: relative;
-}
