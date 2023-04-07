@@ -14,7 +14,6 @@ export default class ImageCard extends Component {
     }
 
     setSpans = () => {
-        console.log(this.imageRef.current.clientHeight);
         const height = this.imageRef.current.clientHeight;
         const span = Math.ceil(height / 50 + 1);
         this.setState({ span })
