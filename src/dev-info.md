@@ -9,3 +9,6 @@ Search icon on the search box is made functional through this patch.
 
 ## Version 1 efficiency patch-003
 The unique key prop for all the root elements rendered in the list is set to those elements' id fetched from the api. This makes the key unique to all the results, as the api org must have assigned unique ids to each result. Previously the elements had the index number of them on the list as the key prop, which is very unefficient as this can give same key to different images/results. Also added the alt prop on the image element inside the map, which assings alt prop to all images in the list fetching the 'description' key from each image from the api.
+
+### Version 2
+This version of the app is made a little bit better in terms of looks. The app has now a responsive grid preview of the images with neccessary gaps in between them.
