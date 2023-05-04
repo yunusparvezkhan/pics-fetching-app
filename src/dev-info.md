@@ -12,3 +12,7 @@ The unique key prop for all the root elements rendered in the list is set to tho
 
 ### Version 2
 This version of the app is made a little bit better in terms of looks. The app has now a responsive grid preview of the images with neccessary gaps in between them.
+
+
+
+...
